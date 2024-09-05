@@ -33,9 +33,9 @@ function ChangeTheme (ThemeValue){
 		document.body.style.color = '#D8FFA4';
 		document.querySelector('.UpperFrame').style.backgroundColor = NightColor;
 		document.body.classList.add('aNightTheme');
-		document.getElementById('span1').style.background='#D8FFA4';
+		/*document.getElementById('span1').style.background='#D8FFA4';
 		document.getElementById('span2').style.background='#D8FFA4';
-		document.getElementById('span3').style.background='#D8FFA4';
+		document.getElementById('span3').style.background='#D8FFA4';*/
 		document.querySelector('.svgPauli').style.fill='#d8ffa4';
 		document.querySelector('.svgPauli1').style.fill='#d8ffa4';
 	}
