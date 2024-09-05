@@ -1,0 +1,89 @@
+.firstFrame {
+    height: 64px;
+}
+.NameAndAvatar{
+    display: flex;
+    /* height: 300px; */
+}
+.NickName{
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 90px;
+    margin-right:50%;
+}
+.Avatar{
+    border-radius: 50%;
+    background-color: #D8FFA4;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Inf{
+    display: flex;
+}
+.infName{
+    width: 50%;
+    padding-left: 90px;
+}
+.infValue{
+    width: 50%;
+}
+.infText{
+    font-size: 30px;
+
+}
+.Orders{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.Ordersleft{
+    width: 30%;
+}
+.Orderscenter{
+    width: 30%;
+}
+.Ordersright{
+    width: 30%;
+}
+.AvatarText{
+    font-size: 50px;
+    font-weight: 600;
+}
+.EditInf{
+    background-color:#D8FFA4;
+    border-radius:20px;
+    font-size: 30px;
+    margin: 10px;
+    padding-inline:30px ;
+    display:none;
+}
+.NewInfValue{
+    display:none;
+    background-color: #D8FFA4;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#NewNickName{
+    margin-left: 90px;
+    margin-right:50%;
+    margin-top: 50px;
+    height: 50px;
+}
+.LogOutBtn{
+    background-color:#D8FFA4;
+    border:none;
+    border-radius:20px;
+    font-size: 30px;
+    margin-top: 35px;
+    height: 70px;
+}
+@media (max-width: 1199px){
+    .NickName {
+        margin-right: 35%;
+    }
+}

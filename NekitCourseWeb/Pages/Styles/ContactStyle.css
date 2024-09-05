@@ -1,0 +1,81 @@
+.firstFrame-InContact {
+    height: 64px;
+    display: flex;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #152800;
+    text-transform: uppercase;
+    flex-direction: column;
+    overflow: hidden;
+}
+.MainFrame{
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ContactUsText{
+    font-size: 54px;
+    font-family: Cooper Lt BT Light, serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ContactForm{
+    width: 100%;
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+}
+.ContactForm-Form{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.ContactForm-TextLeft{
+    width: 40%;
+}
+#contactBtn {
+    width: 25%;
+    margin-bottom: 30px;
+    height: 67px;
+    background-color: #D8FFA4;
+    padding: 20px 24px;
+    outline: 0;
+    border: 0;
+    border-radius:20px;
+    font-family: Sharp Sans, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input{
+    font-size: 14px;
+    height: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius:10px;
+    width: 60%;
+}
+textarea{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius:10px;
+    width: 60%;
+}
+@media (max-width: 1199px){
+    .ContactUsText {
+        font-size: 44px;
+    }
+    #contactBtn {
+        width: 35%;
+    }
+}

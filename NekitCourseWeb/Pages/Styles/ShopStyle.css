@@ -1,0 +1,227 @@
+.ShopCart{
+    font-size: 35px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ShopCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ShopCartDiv1-2{
+    width: 80%;
+}
+.ShopCartDiv1{
+    /* width: 80%; */
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+.ShopCartDiv1-Text1{
+    margin-right: 350px;
+}
+.ShopCartDiv1-Text2{
+    margin-right: 160px;
+}
+.ShopCartDiv1-Text3{
+    margin-right: 100px;
+}
+.ShopCartDiv1-Text4{
+    margin-right: 90px;
+}
+.ShopCartDiv2{
+    /* width: 80%; */
+    display: flex;
+    font-size: 20px;
+}
+.ShopCartDiv2-Text1{
+    margin-right: 205px;
+}
+.ShopCartDiv2-Text2{
+    margin-right: 125px;
+}
+.ShopCartDiv2-Text3{
+    margin-right: 160px;
+}
+.ShopCartDiv2-Text4{
+    margin-right: 170px;
+}
+.CartTotal{
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+.pictures3-RightBlock-Div4ForText-1{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 35px;
+    height: 85px;
+    width: 265px;
+    background-color: #d8ffa4;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+}
+.BuySucces{
+    height: 500px;
+    width: 850px;
+    background-color: white;
+    border-radius: 35px;
+    position: absolute;
+    /* left: 20%; */
+    top: 250%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display:none;
+    color:black;
+}
+.Gal1{
+    transform: rotate(45deg);
+    width: 100px;
+    height: 30px;
+    background-color:#d8ffa4;
+    border-radius: 25px;
+    position: relative;
+    top: 45px;
+    left: -23px;
+    opacity: 0%;
+    animation: GalAppear 3s infinite;
+}
+.Gal2{
+    transform: rotate(-45deg);
+    width:130px;
+    height: 30px;
+    background-color:#d8ffa4;
+    border-radius: 25px;
+    position: relative;
+    top: 2px;
+    left: 40px;    
+    opacity: 0%;
+    animation: GalAppear 3s infinite;
+}
+@keyframes GalAppear{
+    from, to{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 0%;
+    }
+}
+.succes{
+    text-align: center;
+    position: relative;
+    top: 2px;
+    font-size: 45px;
+    font-weight: 600;
+}
+.ForBuySaccess{
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: black;
+    opacity: 0.5;
+}
+.PrivacyPolicy{
+    text-transform: none;
+    font-size: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.PrivacyPolicyBtn{
+    border:none;
+    background: none;
+    font-size: 20px;
+    animation:none;
+}
+.PrivacyPolicyBtn:hover{
+    color:#d8ffa4;
+}
+@keyframes PleaseCheck{
+    from,to{
+        color:black;
+    }
+    50%{
+        color:red;
+    }
+}
+.CardPhoto{
+    width: 520px;
+    height: 200px;
+    background-image: url('Pictures/Card.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+.ChangeCard{
+    margin-top: 20px;
+    background:#d8ffa4;;
+    border:none;
+    border-radius:7px;
+    font-size: 15px;
+    text-decoration: none;
+    display: none;
+}
+.ChangeCard:hover{
+    text-decoration: underline;
+}
+.CardNumber{
+    font-size: 28px;
+    color:white;
+}
+@media (max-width: 1439px){
+    .ShopCartDiv1-Text1{
+        margin-right: 240px;
+    }
+    .ShopCartDiv1-Text2 {
+        margin-right: 122px;
+    }
+    .ShopCartDiv1-Text4 {
+        margin-right: 65px;
+    }
+}
+@media (max-width: 1199px){
+    .ShopCartDiv1-2-hr{
+        display: none;
+    }
+    .ShopCartDiv1-2{
+        display: flex;
+    }
+    .ShopCartDiv1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ShopCartDiv2{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ShopCartDiv2-Text1 {
+        margin-right: 0px;
+    }
+    .ShopCartDiv2-Text2 {
+        margin-right: 0px;
+    }
+    .ShopCartDiv2-Text3 {
+        margin-right: 0px;
+    }
+    .ShopCartDiv2-Text4 {
+        margin-right: 0px;
+    }
+    .ShopCartDiv2-Text5 {
+        margin-right: 0px;
+    }
+    .BuySucces{
+        width: 400px;
+        height: 300px;
+    }
+    .succes{
+        font-size: 35px;
+    }
+}
