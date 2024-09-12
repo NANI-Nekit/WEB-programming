@@ -1,6 +1,13 @@
+
 document.addEventListener('DOMContentLoaded', function() {
 
-    
+    let windowWidth;
+    let counterForReload;
+    if(!localStorage.getItem('counterForReload')){
+        localStorage.setItem('counterForReload',0)
+    }
+    counterForReload=parseInt(localStorage.getItem('counterForReload'))
+
     let btnClick = 0;
     const ScrollMenu = document.querySelector('.ScrollMenu');
     const BurgerBtn = document.querySelector('.Burger');
@@ -42,13 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if(btnClick===2){
             btnClick=0;
             BurgerBtn.className='Burger';
-            ScrollMenu.style.top='-200px';
+            ScrollMenu.style.top='-220px';
             EnRusBtn.style.top='-50px';
-            if(localStorage.getItem('Theme')==='NIGHT'){
-                document.getElementById('span1').style.background='#D8FFA4';
-		        document.getElementById('span2').style.background='#D8FFA4';
-		        document.getElementById('span3').style.background='#D8FFA4';
-            }
+            // if(localStorage.getItem('Theme')==='NIGHT'){
+            //     document.getElementById('span1').style.background='#D8FFA4';
+		    //     document.getElementById('span2').style.background='#D8FFA4';
+		    //     document.getElementById('span3').style.background='#D8FFA4';
+            // }
+            document.getElementById('span1').style.background='#D8FFA4';
+		    document.getElementById('span2').style.background='#D8FFA4';
+	        document.getElementById('span3').style.background='#D8FFA4';
             DayNightBtn.style.top='-101px';            
             document.body.style.overflowY = 'visible';
 
@@ -68,5 +78,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+    });
+
+    //add reload when scale window
+    window.addEventListener('resize', function() {
+        windowWidth = window.innerWidth;
+        //console.log(windowWidth)
+        //console.log(counterForReload)
+       
+        if((windowWidth>=1200)&&(counterForReload===0)){
+            counterForReload=1;
+            localStorage.setItem('counterForReload',counterForReload)
+            location.reload();
+        } 
+        if((windowWidth<1200)&&(windowWidth>=768)&&(counterForReload===1))
+        {
+            counterForReload=0;
+            localStorage.setItem('counterForReload',counterForReload)
+            location.reload();
+        } 
+        if((windowWidth<768)&&(counterForReload===0))
+        {
+            counterForReload=1;
+            localStorage.setItem('counterForReload',counterForReload)
+            location.reload();
+        }        
+               
     });
 })
