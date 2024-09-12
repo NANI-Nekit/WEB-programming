@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.ForRegistration').style.top='-100vh';
         document.querySelector('.ForRegistration').style.opacity='0';
         document.querySelector('.ShopNext').style.display='block';
+        document.querySelector('.SliderBtn-Next').style.display='flex';
+        document.querySelector('.SliderBtn-Prev').style.display='flex';
   })
   
   // let correctPassword1 =false;
@@ -90,6 +92,8 @@ document.querySelector('#Sign2').addEventListener('click',function(){
     document.querySelector('.ForRegistration').style.top='0px';
     document.querySelector('.ForRegistration').style.opacity='0.5';
     document.querySelector('.ShopNext').style.display='none';
+    document.querySelector('.SliderBtn-Next').style.display='none';
+        document.querySelector('.SliderBtn-Prev').style.display='none';
     }
   } 
 
@@ -101,7 +105,7 @@ let correctCardNumber = false;
 let correctNickname = false;
 let correctPassword = false;
 
-  document.querySelector('#emailUser').addEventListener('change',function(){
+  document.querySelector('#emailUser').addEventListener('input',function(){
     let patternForEmail = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
     if(patternForEmail.test(document.querySelector('#emailUser').value)){
       document.querySelector('.emailInput').style.animation='none';
@@ -115,7 +119,7 @@ let correctPassword = false;
       correctEmail = false;
     }
   })
-  document.querySelector('#emailUser1').addEventListener('change',function(){
+  document.querySelector('#emailUser1').addEventListener('input',function(){
     let patternForEmail = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
     if(patternForEmail.test(document.querySelector('#emailUser1').value)){
       document.querySelector('#emailUser1').style.animation='none';
@@ -129,8 +133,27 @@ let correctPassword = false;
       correctEmail = false;
     }
   })
-  document.querySelector('.phoneInput').addEventListener('change',function(){
-    let patternForPhone = /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/;
+  document.querySelector('.phoneInput').addEventListener('input',function(){
+    let patternForPhone = /^(\+375)[ ](29|25|44|33)[ ](\d{3})[ ](\d{2})[ ](\d{2})$/;
+
+    let input = document.querySelector('.phoneInput').value;
+    input = input.replace(/\D/g, '');
+    let formatted = '';
+    for (let i = 3; i < input.length; i++) {
+      if (i === 5) {
+          formatted += ' ';
+      }
+      if (i === 8) {
+        formatted += ' ';
+      }
+     if (i === 10) {
+        formatted += ' ';
+      }
+
+      formatted += input[i];
+    }
+    document.querySelector('.phoneInput').value = '+375 '+formatted;
+
     if(patternForPhone.test(document.querySelector('.phoneInput').value)){
       document.querySelector('.phoneInput').style.animation='none';
       document.querySelector('.phoneInput').style.color='green';
@@ -143,7 +166,7 @@ let correctPassword = false;
       correctEmail = false;
     }
   })
-  document.querySelector('.ageInput').addEventListener('change',function(){
+  document.querySelector('.ageInput').addEventListener('input',function(){
     
     if((document.querySelector('.ageInput').value>=16)){
       document.querySelector('.ageInput').style.animation='none';
@@ -160,8 +183,20 @@ let correctPassword = false;
       correctAge = false;
     }
   })
-  document.querySelector('.cardInput').addEventListener('change',function(){
+  document.querySelector('.cardInput').addEventListener('input',function(){
     let patternForCard = /^(\d{4})[ ](\d{4})[ ](\d{4})[ ](\d{4})$/;
+
+    let input = document.querySelector('.cardInput').value;
+    input = input.replace(/\D/g, '');
+    let formatted = '';
+    for (let i = 0; i < input.length; i++) {
+      if (i > 0 && i % 4 === 0) {
+          formatted += ' ';
+      }
+      formatted += input[i];
+    }
+    document.querySelector('.cardInput').value = formatted;
+
     if(patternForCard.test(document.querySelector('.cardInput').value)){
       document.querySelector('.cardInput').style.animation='none';
       document.querySelector('.cardInput').style.color='green';
@@ -174,7 +209,7 @@ let correctPassword = false;
       correctCardNumber = false;
     }
   })
-  document.querySelector('.nameInPut').addEventListener('change',function(){
+  document.querySelector('.nameInPut').addEventListener('input',function(){
     if((document.querySelector('.nameInPut').value!=null)){
       document.querySelector('.nameInPut').style.animation='none';
       document.querySelector('.nameInPut').style.color='green';
@@ -187,7 +222,7 @@ let correctPassword = false;
       correctNickname = false;
     }
   })
-  document.querySelector('.passwordInPut').addEventListener('change',function(){
+  document.querySelector('.passwordInPut').addEventListener('input',function(){
     let patternForPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     if(patternForPassword.test(document.querySelector('.passwordInPut').value)){
       document.querySelector('.passwordInPut').style.animation='none';
