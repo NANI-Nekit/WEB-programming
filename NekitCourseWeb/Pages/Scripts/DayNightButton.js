@@ -19,9 +19,9 @@ function ChangeTheme (ThemeValue){
 		document.body.style.color = 'Black';
 		document.body.classList.remove('aNightTheme');
 		document.querySelector('.UpperFrame').style.backgroundColor = 'white';
-		document.getElementById('span1').style.background='Black';
-		document.getElementById('span2').style.background='Black';
-		document.getElementById('span3').style.background='Black';
+		// document.getElementById('span1').style.background='Black';
+		// document.getElementById('span2').style.background='Black';
+		// document.getElementById('span3').style.background='Black';
 		document.querySelector('.svgPauli').style.fill='black';
 		document.querySelector('.svgPauli1').style.fill='black';
 	}

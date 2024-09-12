@@ -190,7 +190,7 @@ span{
         margin-bottom: 0px;
     }
 }
-#span1{
+/* #span1{
     background:black;
 }
 #span2{
@@ -198,7 +198,7 @@ span{
 }
 #span3{
     background:black;
-}
+} */
 .ScrollMenu{
     position:absolute;
     transition: all 1s;
