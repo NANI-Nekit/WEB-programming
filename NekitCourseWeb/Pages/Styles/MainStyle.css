@@ -1106,6 +1106,26 @@ transform: scale(1.2);
     .UpperFrame {
         width: 290px;
     }
+
+    .Formulation {
+        left: 22%;
+    }
+    .Shop {
+        left: 0%;
+    }
+    .About {
+        left: -13%;
+    }
+    .Blog {
+        left: -27.5%;
+    }
+    .Contact {
+        left: -43.5%;
+    }
+    .Cart {
+        left: -59.5%;
+    }
+    
     .Logining {
         padding: 20px 100px;
     }
