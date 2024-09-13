@@ -25,9 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
 		    document.getElementById('span2').style.background='Black';
 		    document.getElementById('span3').style.background='Black';
             DayNightBtn.style.top='65px';
+
             document.body.style.overflowY = 'hidden';
+            document.querySelector('.ShopNext').style.display='none';
+            document.querySelector('.SliderBtn-Next').style.display='none';
+            document.querySelector('.SliderBtn-Prev').style.display='none';
 
             mainDivLength = document.querySelector('.mainDiv').clientWidth;
+
+            if (mainDivLength < 1200){
+                document.querySelector('.Formulation').style.color = 'black';
+                document.querySelector('.Shop').style.color = 'black';
+                document.querySelector('.About').style.color = 'black';
+                document.querySelector('.Blog').style.color = 'black';
+                document.querySelector('.Contact').style.color = 'black';
+                document.querySelector('.Cart').style.color = 'black';
+            }
+
             if(mainDivLength <= 768){
                 //console.log(mainDivLength);
                 EnRusBtn.style.top='345px';
@@ -73,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.Cart').style.top = '-50px';
                 ScrollMenu.style.top='-405px';
                 document.querySelector('.ShopNext').style.display='block';
+                document.querySelector('.SliderBtn-Next').style.display='flex';
+                document.querySelector('.SliderBtn-Prev').style.display='flex';
                 if(mainDivLength === 320){
                     document.querySelector('.MyAccount').style.display='block';
                 }
