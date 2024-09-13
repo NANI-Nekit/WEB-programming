@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             DayNightBtn.style.top='65px';
 
             document.body.style.overflowY = 'hidden';
-            document.querySelector('.ShopNext').style.display='none';
-            document.querySelector('.SliderBtn-Next').style.display='none';
-            document.querySelector('.SliderBtn-Prev').style.display='none';
-
+            
             mainDivLength = document.querySelector('.mainDiv').clientWidth;
 
             if (mainDivLength < 1200){
@@ -42,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.Cart').style.color = 'black';
             }
 
-            if(mainDivLength <= 768){
+            if(mainDivLength < 1200){
                 //console.log(mainDivLength);
                 EnRusBtn.style.top='345px';
                 DayNightBtn.style.top='270px';
@@ -52,11 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.Blog').style.top = '150px';
                 document.querySelector('.Contact').style.top = '180px';
                 document.querySelector('.Cart').style.top = '210px';
-                document.querySelector('.ShopNext').style.display='none';
-                if(mainDivLength === 320){
-                    document.querySelector('.MyAccount').style.display='none';
-                }
+                document.querySelector('.MyAccount').style.display='none';
+                
             }
+
+            document.querySelector('.ShopNext').style.display='none';
+            document.querySelector('.SliderBtn-Next').style.display='none';
+            document.querySelector('.SliderBtn-Prev').style.display='none';
            
             
         }
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflowY = 'visible';
 
             mainDivLength = document.querySelector('.mainDiv').clientWidth;
-            if(mainDivLength <= 768){
+            if(mainDivLength < 1200){
                 //console.log(mainDivLength);
                 document.querySelector('.Formulation').style.top = '-50px';
                 document.querySelector('.Shop').style.top = '-50px';
@@ -86,13 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.Contact').style.top = '-50px';
                 document.querySelector('.Cart').style.top = '-50px';
                 ScrollMenu.style.top='-405px';
-                document.querySelector('.ShopNext').style.display='block';
-                document.querySelector('.SliderBtn-Next').style.display='flex';
-                document.querySelector('.SliderBtn-Prev').style.display='flex';
-                if(mainDivLength === 320){
-                    document.querySelector('.MyAccount').style.display='block';
-                }
+                document.querySelector('.MyAccount').style.display='block';                                  
             }
+            document.querySelector('.ShopNext').style.display='block';
+            document.querySelector('.SliderBtn-Next').style.display='flex';
+            document.querySelector('.SliderBtn-Prev').style.display='flex';
         }
     });
 
