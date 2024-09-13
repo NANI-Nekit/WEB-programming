@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 //нажатие сигн2
 document.querySelector('#Sign2').addEventListener('click',function(){
+  //if(document.getElementById('passwordUser').value)
   SignInUser();
 })
 
